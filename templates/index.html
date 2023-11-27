@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My learning machine model</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+    
+    <!--navBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+</head>
+<body>
+
+    <div class="login"></div>
+    <h2>Price Prediction</h2>
+    <p>Introduce the number of price</p>
+    <form action="{{url_for('predict')}}" method="post">
+        <!--inputs
+        airline: 0.07938298196754515
+        source_city: 0.0
+        departure_time: 0.8670875866703879
+        stops: 0.0
+        arrival_time: 0.8760476596819793
+        destination_city: 0.8333627209936756
+        class: 0.0
+        duration: 0.027346938775510202
+        days_left: 0.0
+        
+        -->
+        <input type="text" name ="airline" placeholder="0.079" required="required">
+        <input type="text" name ="source_city" placeholder="0.0" required="required">
+        <input type="text" name ="departure_time" placeholder="0.867" required="required">
+        <input type="text" name ="stops" placeholder="0.0" required="required">
+        <input type="text" name ="arrival_time" placeholder="0.8760" required="required">
+        <input type="text" name ="destination_city" placeholder="0.833" required="required">
+        <input type="text" name ="classr" placeholder="0.0" required="required">
+        <input type="text" name ="duration" placeholder="0.0273" required="required">
+        <input type="text" name ="days_left" placeholder="0.0" required="required">
+
+        <button type = "submit" class="btn btn-primary btn-block btn-block>"> PREDICT</button>
+    </form>
+    <br>
+    </br>
+    <b>{{prediction_text}}</b>
+</body>
+</html>
