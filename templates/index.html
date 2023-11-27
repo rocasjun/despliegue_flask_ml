@@ -65,8 +65,23 @@
         days_left: 0.0
         
         -->
-        <input type="text" name ="airline" placeholder="0.079" required="required">
-        <input type="text" name ="source_city" placeholder="0.0" required="required">
+        <select name="airline" required="required">
+          <option value="1.000000">Vistara</option>
+          <option value="0.738096">Air_India</option>
+          <option value="0.046878">Indigo</option>
+          <option value="0.059339">GO_FIRST</option>
+          <option value="0.000000">AirAsia</option>
+          <option value="0.079383">SpiceJet</option>
+        </select>
+      
+        <select name="source_city" required="required">
+          <option value="0.000000">Delhi</option>
+          <option value="0.831958">Mumbai</option>
+          <option value="0.827241">Bangalore</option>
+          <option value="0.918166">Kolkata</option>
+          <option value="0.395628">Hyderabad</option>
+          <option value="1.000000">Chennai</option>
+        </select>
         <input type="text" name ="departure_time" placeholder="0.867" required="required">
         <input type="text" name ="stops" placeholder="0.0" required="required">
         <input type="text" name ="arrival_time" placeholder="0.8760" required="required">
