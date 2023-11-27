@@ -65,6 +65,7 @@
         days_left: 0.0
         
         -->
+        <label for="airline">Airline:</label>
         <select name="airline" required="required">
           <option value="1.000000">Vistara</option>
           <option value="0.738096">Air_India</option>
@@ -73,7 +74,8 @@
           <option value="0.000000">AirAsia</option>
           <option value="0.079383">SpiceJet</option>
         </select>
-      
+        
+        <label for="source_city">Source City:</label>
         <select name="source_city" required="required">
           <option value="0.000000">Delhi</option>
           <option value="0.831958">Mumbai</option>
@@ -82,12 +84,52 @@
           <option value="0.395628">Hyderabad</option>
           <option value="1.000000">Chennai</option>
         </select>
-        <input type="text" name ="departure_time" placeholder="0.867" required="required">
-        <input type="text" name ="stops" placeholder="0.0" required="required">
-        <input type="text" name ="arrival_time" placeholder="0.8760" required="required">
-        <input type="text" name ="destination_city" placeholder="0.833" required="required">
-        <input type="text" name ="classr" placeholder="0.0" required="required">
+
+        <label for="departure_time">Departure Time:</label>
+        <select name="departure_time" required="required">
+          <option value="0.896027">Morning</option>
+          <option value="0.804496">Early_Morning</option>
+          <option value="0.867088">Evening</option>
+          <option value="1.000000">Night</option>
+          <option value="0.645311">Afternoon</option>
+          <option value="0.000000">Late_Night</option>
+        </select>
+
+        <label for="stops">Stops:</label>
+        <select name="stops" required="required">
+          <option value="1.000000">one</option>
+          <option value="0.000000">zero</option>
+          <option value="0.350277">two_or_more</option>
+        </select>
+
+        <label for="arrival_time">Arrival Time:</label>
+        <select name="arrival_time" required="required">
+            <option value="0.876048">Night</option>
+            <option value="1.000000">Evening</option>
+            <option value="0.930839">Morning</option>
+            <option value="0.613097">Afternoon</option>
+            <option value="0.315340">Early_Morning</option>
+            <option value="0.000000">Late_Night</option>
+        </select>
+        <label for="destination_city">Destination City:</label>
+        <select name="destination_city" required="required">
+            <option value="0.833363">Mumbai</option>
+            <option value="0.000000">Delhi</option>
+            <option value="0.896218">Bangalore</option>
+            <option value="1.000000">Kolkata</option>
+            <option value="0.565147">Hyderabad</option>
+            <option value="0.998230">Chennai</option>
+        </select>
+
+        <label for="classr">Class:</label>
+        <select name="classr" required="required">
+            <option value="0.0">Economy</option>
+            <option value="1.0">Business</option>
+        </select>
+
+        <label for="duration">Duration:</label>
         <input type="text" name ="duration" placeholder="0.0273" required="required">
+        <label for="days_left">Days Left:</label>
         <input type="text" name ="days_left" placeholder="0.0" required="required">
 
         <button type = "submit" class="btn btn-primary btn-block btn-block>"> PREDICT</button>
